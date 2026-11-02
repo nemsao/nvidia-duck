@@ -1,0 +1,7 @@
+walk_rough.pt: xuất từ model_6250.pt của run Rough-MicroDuck 2026-10-29_10-10-29 lúc 2026-10-29 22:03:34
+velstand.pt, ball_kick_left.pt, ball_kick_right.pt: từ huggingface.co/pollen-robotics/microduck-policies (Apache-2.0,
+Pollen Robotics), tải 2026-10-30, đổi ONNX -> TorchScript bằng pollen_onnx.py (sai lệch < 2e-5). velstand train trên
+Mjlab-VelStand-Rough-Backlash-MicroDuck (microduck_rl 3750776, checkpoint 2749).
+Thử trên Isaac Lab (check_pollen.py): đứng dậy 50/50 từ 5 tư thế ngã trong 0,4-0,9 s; sút 32/32 mỗi chân, bóng
+1,3-1,4 m/s, lệch 5-11 độ, không ngã; đi bộ kém walk_rough.pt (sai lệch vận tốc 0,66 so với 0,41, ngã 3 so với 0
+trong 64 vịt x 20 s), nên đi bộ vẫn dùng walk_rough.pt.
